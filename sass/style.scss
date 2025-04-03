@@ -1,0 +1,530 @@
+@use 'variables' as *;
+@import 'themes';
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+.full-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'inter';
+    background-color: var(--bg-color);
+
+    &--lora{
+        font-family: 'lora';
+    }
+
+    &--iconsolata{
+        font-family: 'iconsolata';
+    }
+    
+}
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: $width-mobile;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px){
+        width: $width-tablet;
+        margin-bottom: 2.938rem;
+        margin-top: 2.938rem;
+        max-width: 46.063rem;
+    }
+    @media (min-width: 1024px){
+        margin-top: 3.438rem;
+    }
+
+    &__logo{
+        width: 1.75rem;
+        height: 2rem;
+        margin-right: auto;
+        color: $grey-hard;
+
+        @media (min-width: 768px){
+            width: 2rem;
+            height: 2.281rem;
+        }
+    }
+
+    &__container-font{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;
+        }
+    }
+
+    &__font{
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--text-color);
+        line-height: 1.5rem;
+
+        @media (min-width: 768px){
+            font-size: 1.125rem;
+        }
+    }
+
+    &__arrow{
+        margin-left: 0.875rem;
+
+        @media (min-width: 768px){
+            margin-left: 1.031rem;
+        }
+    }
+
+    &__line{
+        width: 1px;
+        height: 2rem;
+        background-color: $grey-medium;
+        margin-right: 0.92rem;
+        margin-left: 0.92rem;
+
+        @media (min-width: 768px){
+            margin-left: 1.35rem;
+            margin-right: 1.35rem;
+        }
+    }
+
+    &__container-theme{
+        display: flex;
+        gap: 0.75rem;
+
+        @media (min-width: 768px){
+            gap: 1.25rem;
+        }
+
+       
+    }
+
+    &__moon{
+        color: var(--icon-color);
+     }
+}
+.font-options{
+    position: absolute;
+    width: 8.625rem;
+    height: 7.188rem;
+    top: 30px;
+    right: 0;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px var(--box-shadow-blur) var(--box-shadow-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    background-color: var(--options-color);
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: default;
+    justify-content: center;
+    z-index: 999;
+
+    &--visible{
+        display: flex;
+    }
+
+    @media (min-width: 768px){
+        font-size: 1.125rem;
+        width: 11.438rem;
+        height: 9.5rem;
+    }
+
+    &__sans-serif{
+        font-family: 'inter';
+
+        &:hover{
+            color: $dark-grey-hard;    
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;   
+          }
+    }
+
+    &__serif{
+        font-family: 'lora';
+
+        &:hover{
+            color: $dark-grey-hard;  
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;     
+          }
+    }
+
+    &__mono{
+        font-family: 'iconsolata';
+
+        &:hover{
+            color: $dark-grey-hard;   
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;    
+          }
+    }
+}
+
+.theme-button{
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: var(--icon-color);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+
+    &:hover{
+        background-color: $dark-grey-hard;  
+        cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;    
+      }
+
+    &__ball{
+        width: 0.875rem;
+        height: 0.875rem;
+        background-color: white;
+        border-radius: 99px;
+        margin-left: 3px;
+        transition: transform 0.5s ease-in-out;
+
+        .dark-theme &{
+            transform: translateX(20px);
+        }
+
+        &--move{
+            
+            transform: translateX(20px);
+        }
+    }
+}
+
+.search-container{
+    width: $width-mobile;
+    position: relative;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+
+   
+
+    @media (min-width: 768px){
+        width: $width-tablet;
+        height: 4rem;
+        margin-bottom: 2.938rem;
+        max-width: 46rem;
+    }
+
+    
+
+    &__input{
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        background-color: var(--input-color);
+        border: none;
+        padding-left: 1.5rem;
+        font-family: 'inter';
+        font-size: 1rem;
+        color: var(--text-color);
+        font-weight: 700;
+        caret-color: $dark-grey-hard;
+
+        &--lora{
+            font-family: 'lora';
+        }
+
+        &--iconsolata{
+            font-family: 'iconsolata';
+        }
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
+            border: 0.5px solid $dark-grey-hard;
+            
+        }
+
+        @media (min-width: 768px){
+            font-size: 1.25rem;
+        }
+
+        &:focus{
+           border: 0.5px solid $dark-grey-hard;
+           outline: none;
+        }
+
+        &::placeholder{
+            color: var(--text-color);
+            opacity: 0.25;
+        }
+    }
+
+    &__svg{
+        position: absolute;
+        right: 1.5rem;
+        bottom: 15px;
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
+            
+        }
+
+        @media (min-width: 768px){
+            bottom: 23px;
+        }
+    }
+}
+.result-container{
+    display: flex;
+    width: $width-mobile;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px){
+        width: $width-tablet;
+        margin-bottom: 2.75rem;
+        max-width: 46.063rem;
+    }
+
+    
+    &__word{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        @media (min-width: 768px){
+            gap: 0.815rem;
+        }
+
+
+        h1{
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: 700;
+
+            @media (min-width: 768px){
+                font-size: 4rem;
+            }
+        }
+        p{
+            font-size: 1.125rem;
+            line-height: 24px;
+            color: $dark-grey-hard;
+
+            @media (min-width: 768px){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__listen{
+        width: 3rem;
+        height: 3rem;
+        align-self: center;
+        margin-left: auto;
+        color: $dark-grey-hard;
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto;
+            color: white;
+
+        }
+
+        &:hover .result-container__circle{
+            opacity: 1;
+            color: $dark-grey-hard;
+        }
+
+        @media (min-width: 768px){
+            width: 4.688rem;
+            height: 4.688rem;
+        }
+    }
+
+}
+.result-description{
+    display: flex;
+    flex-direction: column;
+    width: $width-mobile;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px){
+        width: $width-tablet;
+        margin-bottom: 2.513rem;
+        max-width: 46.063rem;
+    }
+
+
+    &__meaning{
+        font-size: 1rem;
+        color: $grey-hard;
+        margin-bottom: 1.063rem;
+
+        @media (min-width: 768px){
+            font-size: 1.25rem;
+            margin-bottom: 1.563rem;
+        }
+    }
+}
+.type-line{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px){
+        margin-bottom: 2.513rem;
+    }
+
+    &__word{
+        font-size: 1.125rem;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--text-color);
+
+        @media (min-width: 768px){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__line{
+        height: 1px;
+        width: 81.35%;
+        background-color: var(--line-color);
+        margin-left: auto;
+
+        @media (min-width: 768px){
+            width: 88.26%;
+        }
+    }
+}
+
+.result{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.813rem;
+    margin-bottom: 1.8rem;
+
+    @media (min-width: 768px){
+       margin-bottom: 2.625rem;
+       width: 96.66%;
+       margin-left: 1.5rem;
+    }
+
+    li{
+        position: relative;
+        padding-left: 1.563rem;
+        font-size: 0.938rem;
+        color: var(--text-color);
+        line-height: 1.5rem;
+
+        @media (min-width: 768px){
+            font-size: 1.125rem;
+        }
+
+        &::before{
+            content: "•";
+            position: absolute;
+            left: -0.7%;
+            font-size: 1.1rem;
+            color: #8F19E8;
+            top: -1px;
+        }
+    }
+
+    &__example{
+        padding-left: 1.563rem;
+        font-size: 0.938rem;
+        line-height: 1.5rem;
+        color: $grey-hard;
+        margin-bottom: 1.8rem;
+
+        @media (min-width: 768px){
+            font-size: 1.125rem;
+            padding-left: 3rem;
+        }
+    }
+
+    &--verb{
+        margin-bottom: 0.813rem;
+    }
+}
+
+.result-synonyms{
+    display: flex;
+
+    @media (min-width: 768px){
+        font-size: 1.25rem;
+    }
+    
+
+    &__text{
+        color: $grey-hard;
+        margin-right: 1.625rem;
+    }
+
+    &__result{
+        color: $dark-grey-hard;
+        font-weight: 700;
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
+           text-decoration: underline; 
+           text-underline-offset: 4px;
+        }
+    }
+}
+
+.footer{
+    width: $width-mobile;
+    border-top: 1px solid var(--line-color);
+    padding-top: 1.7rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: 768px){
+        width: $width-tablet;
+        padding-top: 1.375rem;
+        margin-bottom: 7.5rem;
+        max-width: 46.063rem;
+    }
+
+}
+
+.source{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (min-width: 768px){
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    &__text{
+        font-size: 0.875rem;
+        color: $grey-hard;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    &__link{
+        font-size: 0.875rem;
+        color: var(--text-color);
+
+        &:hover{
+            cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
+            
+        }
+    }
+
+    &__icon{
+        margin-left: 5px;
+    }
+}

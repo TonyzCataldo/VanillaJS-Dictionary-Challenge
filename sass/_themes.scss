@@ -1,0 +1,26 @@
+
+@use 'variables' as *;
+
+
+
+.light-theme {
+    --bg-color: white;
+    --line-color: #{$grey-medium};
+    --icon-color: #{$grey-hard};
+    --text-color: #{$black-200};
+    --input-color: #{$grey-light};
+    --options-color: white;
+    --box-shadow-color: rgba(0, 0, 0, 0.25);
+    --box-shadow-blur: 4px;
+  }
+  
+  .dark-theme {
+    --bg-color: #{$black-400};
+    --line-color: #{$dark-grey-medium};
+    --icon-color: #{$dark-grey-hard};
+    --text-color: white;
+    --input-color: #{$dark-grey-light};
+    --options-color: #{$dark-grey-light};
+    --box-shadow-color: #{$dark-grey-hard};
+    --box-shadow-blur: 20px;
+  }

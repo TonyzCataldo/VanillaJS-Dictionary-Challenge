@@ -1,0 +1,37 @@
+@font-face{
+    font-family: 'inter';
+    src: url('../assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'lora';
+    src: url('../assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'lora-italic';
+    src: url('../assets/fonts/lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'iconsolata';
+    src: url('../assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+
+$black-400: #050505;
+$black-200: #2D2D2D;
+
+$grey-light: #F4F4F4;
+$dark-grey-light: #1F1F1F;
+
+$grey-medium: #E9E9E9;
+$dark-grey-medium: #3A3A3A;
+
+
+$grey-hard: #757575;
+$dark-grey-hard: #A445ED;
+
+$width-mobile: 87.2%;
+$width-tablet: 89.7%;
+
