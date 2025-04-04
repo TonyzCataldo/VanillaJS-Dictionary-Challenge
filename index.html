@@ -35,7 +35,15 @@
 <div class="search-container">
   <input class="search-container__input" type="text" placeholder="Search for any word...">
   <svg class="search-container__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg>
+  <p class="search-container__error-msg">Whoops, can't be empty...</p>
 </div>
+<div class="error-container">
+  <p class="error-container__emoji">😕</p>
+  <h2>No definitions Found</h2>
+  <p class="error-container__message">Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+</div>
+
+<div class="response">
 <main class="result-container">
   <section class="result-container__word">
   <h1>Keyboard</h1>
@@ -81,5 +89,6 @@
     </a>
   </div>
 </footer>
+</div>
 </body>
 </html>

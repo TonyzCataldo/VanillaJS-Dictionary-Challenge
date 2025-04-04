@@ -6,6 +6,7 @@ const sansSerif = document.querySelector('.font-options__sans-serif');
 const serif = document.querySelector('.font-options__serif');
 const mono = document.querySelector('.font-options__mono');
 const input = document.querySelector('.search-container__input');
+const inputIcon = document.querySelector('.search-container__svg');
 
 
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -57,6 +58,50 @@ sansSerif.addEventListener("click", () => {
 })
 
 
-fetch("https://api.dictionaryapi.dev/api/v2/entries/en/keyboard")
-  .then(res => res.json())
-  .then(data => console.log(data));
+function Search(word) {
+  const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+  
+  fetch(url).then((res) => {
+    if (!res.ok) {
+      throw new Error("word not found");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data);
+    document.querySelector('.response').classList.add("response--visible")
+  })
+  .catch((error) =>{
+document.querySelector('.error-container').classList.add("error-container--visible")
+document.querySelector('.response').classList.remove("response--visible")
+  })
+  input.value = ""
+}
+
+input.addEventListener("keydown", (e) => {
+  if(e.key === "Enter"){
+    const word = input.value.trim();
+    if(word === ""){
+      document.querySelector('.search-container__error-msg').classList.add("search-container__error-msg--visible")
+      input.classList.add("search-container__input--error")
+      document.querySelector('.error-container').classList.remove("error-container--visible")
+      document.querySelector('.response').classList.remove("response--visible")
+    }
+    else{
+      document.querySelector('.search-container__error-msg').classList.remove("search-container__error-msg--visible")
+      input.classList.remove("search-container__input--error")
+      document.querySelector('.error-container').classList.remove("error-container--visible")
+      document.querySelector('.response').classList.remove("response--visible")
+    }
+  if(word){
+    Search(word);
+  }
+  }
+  })
+
+  inputIcon.addEventListener("click", () => {
+    const word = input.value.trim();
+    if (word) {
+      Search(word);
+    }
+  });
