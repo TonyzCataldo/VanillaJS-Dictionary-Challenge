@@ -43,6 +43,7 @@
 }
 
 .full-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,12 +59,15 @@
 
 .header {
   display: flex;
+  position: fixed;
   flex-direction: row;
   width: 87.2%;
   align-items: center;
   justify-content: end;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: var(--bg-color);
+  z-index: 999;
 }
 @media (min-width: 768px) {
   .header {
@@ -71,11 +75,15 @@
     margin-bottom: 2.938rem;
     margin-top: 2.938rem;
     max-width: 46.063rem;
+    position: static;
+    padding: 0;
   }
 }
 @media (min-width: 1024px) {
   .header {
     margin-top: 3.438rem;
+    position: static;
+    padding: 0;
   }
 }
 .header__logo {
@@ -228,6 +236,7 @@
   position: relative;
   height: 3rem;
   margin-bottom: 1.5rem;
+  margin-top: 80px;
 }
 @media (min-width: 768px) {
   .search-container {
@@ -235,6 +244,7 @@
     height: 4rem;
     margin-bottom: 2.938rem;
     max-width: 46rem;
+    margin-top: 0;
   }
 }
 .search-container__input {
@@ -492,11 +502,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.813rem;
-  margin-bottom: 1.8rem;
 }
 @media (min-width: 768px) {
   .result {
-    margin-bottom: 2.625rem;
     width: 96.66%;
     margin-left: 1.5rem;
   }
@@ -535,10 +543,12 @@
 
 .result-synonyms {
   display: flex;
+  margin-top: 1.8rem;
 }
 @media (min-width: 768px) {
   .result-synonyms {
     font-size: 1.25rem;
+    margin-top: 2.625rem;
   }
 }
 .result-synonyms__text {

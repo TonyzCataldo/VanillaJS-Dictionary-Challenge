@@ -10,6 +10,7 @@
 
 
 .full-content{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,21 +31,28 @@
 
 .header{
     display: flex;
+    position: fixed;
     flex-direction: row;
     width: $width-mobile;
     align-items: center;
     justify-content: end;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--bg-color);
+    z-index: 999;
 
     @media (min-width: 768px){
         width: $width-tablet;
         margin-bottom: 2.938rem;
         margin-top: 2.938rem;
         max-width: 46.063rem;
+        position: static;
+        padding: 0;
     }
     @media (min-width: 1024px){
         margin-top: 3.438rem;
+        position: static;
+        padding: 0;
     }
 
     &__logo{
@@ -212,6 +220,7 @@
     position: relative;
     height: 3rem;
     margin-bottom: 1.5rem;
+    margin-top: 80px;
 
    
 
@@ -220,6 +229,7 @@
         height: 4rem;
         margin-bottom: 2.938rem;
         max-width: 46rem;
+        margin-top: 0;
     }
 
     
@@ -496,10 +506,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.813rem;
-    margin-bottom: 1.8rem;
 
     @media (min-width: 768px){
-       margin-bottom: 2.625rem;
        width: 96.66%;
        margin-left: 1.5rem;
     }
@@ -543,9 +551,11 @@
 
 .result-synonyms{
     display: flex;
+    margin-top: 1.8rem;
 
     @media (min-width: 768px){
         font-size: 1.25rem;
+        margin-top: 2.625rem;
     }
     
 
