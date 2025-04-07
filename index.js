@@ -205,7 +205,14 @@ sourceLink.rel = "noopener noreferrer";
     
     
     document.querySelector('.response').classList.add("response--visible")
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   })
+
+
   .catch((error) =>{
     console.log(error)
 document.querySelector('.error-container').classList.add("error-container--visible")
