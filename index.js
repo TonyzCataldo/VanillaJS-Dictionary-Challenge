@@ -158,10 +158,10 @@ if (Array.isArray(synonyms) && synonyms.length > 0) {
     const synonymLink = document.createElement("a");
     synonymLink.classList.add("result-synonyms__result");
     synonymLink.textContent = synonym;
-    synonymLink.href = "#"; // você pode mudar isso pra fazer uma nova busca, se quiser
+    synonymLink.href = "#"; 
     synonymLink.addEventListener("click", (e) => {
       e.preventDefault();
-      Search(synonym); // executa nova busca com a palavra clicada
+      Search(synonym); 
     });
 
     resultSynonyms.appendChild(synonymLink);
@@ -263,3 +263,8 @@ input.addEventListener("keydown", (e) => {
     }
   });
   
+  window.addEventListener("DOMContentLoaded", () => {
+    const defaultWord = "keyboard"; 
+    input.value = defaultWord;   
+    Search(defaultWord);         
+  });
