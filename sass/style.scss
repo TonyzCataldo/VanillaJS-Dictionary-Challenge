@@ -526,21 +526,19 @@
     }
 
     &__example{
-        padding-left: 1.563rem;
+        
         font-size: 0.938rem;
         line-height: 1.5rem;
         color: $grey-hard;
-        margin-bottom: 1.8rem;
+        margin-top: 0.813rem;
 
         @media (min-width: 768px){
             font-size: 1.125rem;
-            padding-left: 3rem;
+            
         }
     }
 
-    &--verb{
-        margin-bottom: 0.813rem;
-    }
+    
 }
 
 .result-synonyms{
@@ -559,6 +557,8 @@
     &__result{
         color: $dark-grey-hard;
         font-weight: 700;
+        text-decoration: none;
+        margin-right: 0.75rem;
 
         &:hover{
             cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
@@ -602,6 +602,7 @@
     &__link{
         font-size: 0.875rem;
         color: var(--text-color);
+        display: flex;
 
         &:hover{
             cursor: url('../assets/images/Pointer\ Copy\ 13.png') 2 2, auto; 
@@ -610,6 +611,7 @@
     }
 
     &__icon{
-        margin-left: 5px;
+        margin-left: 8px;
+        align-self: center;
     }
 }

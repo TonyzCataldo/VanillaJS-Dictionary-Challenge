@@ -522,20 +522,15 @@
   top: -1px;
 }
 .result__example {
-  padding-left: 1.563rem;
   font-size: 0.938rem;
   line-height: 1.5rem;
   color: #757575;
-  margin-bottom: 1.8rem;
+  margin-top: 0.813rem;
 }
 @media (min-width: 768px) {
   .result__example {
     font-size: 1.125rem;
-    padding-left: 3rem;
   }
-}
-.result--verb {
-  margin-bottom: 0.813rem;
 }
 
 .result-synonyms {
@@ -553,6 +548,8 @@
 .result-synonyms__result {
   color: #A445ED;
   font-weight: 700;
+  text-decoration: none;
+  margin-right: 0.75rem;
 }
 .result-synonyms__result:hover {
   cursor: url("../assets/images/Pointer Copy 13.png") 2 2, auto;
@@ -594,12 +591,14 @@
 .source__link {
   font-size: 0.875rem;
   color: var(--text-color);
+  display: flex;
 }
 .source__link:hover {
   cursor: url("../assets/images/Pointer Copy 13.png") 2 2, auto;
 }
 .source__icon {
-  margin-left: 5px;
+  margin-left: 8px;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
