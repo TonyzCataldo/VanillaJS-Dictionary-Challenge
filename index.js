@@ -218,7 +218,7 @@ sourceLink.rel = "noopener noreferrer";
 document.querySelector('.error-container').classList.add("error-container--visible")
 document.querySelector('.response').classList.remove("response--visible")
   })
-  input.value = ""
+  
 }
 
 
