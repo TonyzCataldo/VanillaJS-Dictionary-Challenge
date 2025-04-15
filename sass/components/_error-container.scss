@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.error-container {
+  width: $width-mobile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3.5rem;
+  display: none;
+
+  @media (min-width: 768px) {
+    width: $width-tablet;
+    max-width: 46.063rem;
+    margin-top: 4.5rem;
+  }
+
+  &--visible {
+    display: flex;
+  }
+
+  &__emoji {
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.65rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__message {
+    font-size: 0.938rem;
+    color: $grey-hard;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+}

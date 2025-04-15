@@ -1,0 +1,33 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.theme-button {
+  width: 2.5rem;
+  height: 1.25rem;
+  background-color: var(--icon-color);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $dark-grey-hard;
+    cursor: url("../assets/images/Pointer\ Copy\ 13.png") 2 2, auto;
+  }
+
+  &__ball {
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: white;
+    border-radius: 99px;
+    margin-left: 3px;
+    transition: transform 0.5s ease-in-out;
+
+    .dark-theme & {
+      transform: translateX(20px);
+    }
+
+    &--move {
+      transform: translateX(20px);
+    }
+  }
+}

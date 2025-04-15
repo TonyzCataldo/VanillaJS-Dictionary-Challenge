@@ -1,0 +1,17 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.response {
+  display: none;
+  flex-direction: column;
+  width: $width-mobile;
+
+  @media (min-width: 768px) {
+    width: $width-tablet;
+    max-width: 46.063rem;
+  }
+
+  &--visible {
+    display: flex;
+  }
+}

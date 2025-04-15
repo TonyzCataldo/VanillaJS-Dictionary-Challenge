@@ -1,0 +1,13 @@
+@use "base/base";
+@use "base/themes" as *;
+@use "base/variables" as *;
+
+@use "layout/header";
+@use "layout/search";
+@use "layout/response-container";
+@use "layout/result-container";
+@use "layout/result-description";
+@use "layout/footer";
+
+@use "components/theme-btn";
+@use "components/error-container";

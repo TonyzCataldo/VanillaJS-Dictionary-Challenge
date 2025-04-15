@@ -1,0 +1,129 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.result-description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2.513rem;
+    max-width: 46.063rem;
+  }
+
+  &__meaning {
+    font-size: 1rem;
+    color: $grey-hard;
+    margin-bottom: 1.063rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+      margin-bottom: 1.563rem;
+    }
+  }
+}
+.type-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2.513rem;
+  }
+
+  &__word {
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text-color);
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 81.35%;
+    background-color: var(--line-color);
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+      width: 88.26%;
+    }
+  }
+}
+
+.result {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.813rem;
+
+  @media (min-width: 768px) {
+    width: 96.66%;
+    margin-left: 1.5rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.563rem;
+    font-size: 0.938rem;
+    color: var(--text-color);
+    line-height: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: -0.7%;
+      font-size: 1.1rem;
+      color: #8f19e8;
+      top: -1px;
+    }
+  }
+
+  &__example {
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+    color: $grey-hard;
+    margin-top: 0.813rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.result-synonyms {
+  display: flex;
+  margin-top: 1.8rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    margin-top: 2.625rem;
+  }
+
+  &__text {
+    color: $grey-hard;
+    margin-right: 1.625rem;
+  }
+
+  &__result {
+    color: $dark-grey-hard;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 0.75rem;
+
+    &:hover {
+      cursor: url("../assets/images/Pointer\ Copy\ 13.png") 2 2, auto;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

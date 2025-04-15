@@ -1,0 +1,97 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.search-container {
+  width: $width-mobile;
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 85px;
+
+  @media (min-width: 768px) {
+    width: $width-tablet;
+    height: 4rem;
+    margin-bottom: 2.938rem;
+    max-width: 46rem;
+    margin-top: 0;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: var(--input-color);
+    border: none;
+    padding-left: 1.5rem;
+    font-family: "inter";
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+    caret-color: $dark-grey-hard;
+
+    &--lora {
+      font-family: "lora";
+    }
+
+    &--iconsolata {
+      font-family: "iconsolata";
+    }
+
+    &--error {
+      &:focus {
+        border: 0.5px solid #ff5252 !important;
+        outline: none;
+      }
+      &:hover {
+        border: 0.5px solid #ff5252 !important;
+      }
+    }
+
+    &:hover {
+      cursor: url("../assets/images/Pointer\ Copy\ 13.png") 2 2, auto;
+      border: 0.5px solid $dark-grey-hard;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    &:focus {
+      border: 0.5px solid $dark-grey-hard;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--text-color);
+      opacity: 0.25;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 15px;
+
+    &:hover {
+      cursor: url("../assets/images/Pointer\ Copy\ 13.png") 2 2, auto;
+    }
+
+    @media (min-width: 768px) {
+      bottom: 23px;
+    }
+  }
+  &__error-msg {
+    font-size: 1rem;
+    margin-top: 0.438rem;
+    color: #ff5252;
+    display: none;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    &--visible {
+      display: block;
+    }
+  }
+}

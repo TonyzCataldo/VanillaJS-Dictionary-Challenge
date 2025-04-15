@@ -1,0 +1,65 @@
+@use "../base/variables" as *;
+@use "../base/themes" as *;
+
+.result-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2.75rem;
+    max-width: 46.063rem;
+  }
+
+  &__word {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (min-width: 768px) {
+      gap: 0.815rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--text-color);
+      font-weight: 700;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 24px;
+      color: $dark-grey-hard;
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__listen {
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+    margin-left: auto;
+    color: $dark-grey-hard;
+
+    &:hover {
+      cursor: url("../assets/images/Pointer\ Copy\ 13.png") 2 2, auto;
+      color: white;
+    }
+
+    &:hover .result-container__circle {
+      opacity: 1;
+      color: $dark-grey-hard;
+    }
+
+    @media (min-width: 768px) {
+      width: 4.688rem;
+      height: 4.688rem;
+    }
+  }
+}
