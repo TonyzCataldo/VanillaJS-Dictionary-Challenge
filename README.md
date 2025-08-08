@@ -2,7 +2,7 @@
 
 Este projeto é uma solução para o desafio [Dictionary Web App](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL) da plataforma Frontend Mentor. O objetivo era criar um dicionário em inglês com suporte a múltiplos temas, troca de fontes, busca por palavras e integração com API externa.
 
-Link: https://tonyzcataldo.github.io/Dictionary-Challenge/
+Link: https://tonyzcataldo.github.io/VanillaJS-Dictionary-Challenge/
 
 ## 🛠 Tecnologias
 
