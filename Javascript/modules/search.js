@@ -22,7 +22,7 @@ export function search(word) {
       document
         .querySelectorAll(".result-description")
         .forEach((el) => el.remove());
-      renderDefinitions(entry.meanings, search); // Passa a função Search para os sinônimos
+      renderDefinitions(entry.meanings); // Passa a função Search para os sinônimos
 
       document.querySelectorAll(".footer").forEach((el) => el.remove());
       renderFooter(entry.sourceUrls[0]);

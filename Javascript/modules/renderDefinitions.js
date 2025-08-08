@@ -1,7 +1,7 @@
 import { responseEl } from "../dom/elements.js";
 import { search } from "./search.js";
 
-export function renderDefinitions(meanings, Search) {
+export function renderDefinitions(meanings) {
   meanings.forEach((meaning) => {
     const section = document.createElement("section");
     section.classList.add("result-description");
