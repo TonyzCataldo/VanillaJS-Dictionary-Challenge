@@ -24,7 +24,7 @@ import {
 
 import { playPhonetic } from "./modules/playPhonetic.js";
 import { enterCallback, clickCallback } from "./modules/callbacks.js";
-import { search } from "./modules/search.js"; // ✅ IMPORTADO
+import { search } from "./modules/search.js";
 
 setInitialTheme();
 watchSystemThemeChange();
