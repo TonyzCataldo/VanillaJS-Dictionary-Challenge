@@ -1,4 +1,4 @@
-import { fontContainer, fontName, body } from "../dom/elements.js";
+import { fontContainer, fontName, body, input } from "../dom/elements.js";
 
 export function containerVisibilityToggle() {
   fontContainer.classList.toggle("font-options--visible");
